@@ -74,13 +74,22 @@ body {
       border-radius: 8px; }
 
 .card-list {
-  display: grid;
-  grid-template-columns: repeat(4, 200px);
-  grid-column-gap: 48px;
-  grid-row-gap: 50px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 128px;
+  width: 1200px;
+  margin: auto; }
+
+@media screen and (max-width: 1024px) {
+  .card-list {
+    padding: 0 40px;
+    width: 1024px; } }
 
 .card {
   width: 200px;
@@ -88,7 +97,8 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: 1px solid #f3f3f3;
-  border-radius: 5px; }
+  border-radius: 5px;
+  margin-bottom: 50px; }
   .card:hover {
     -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07); }
